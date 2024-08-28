@@ -1,20 +1,113 @@
-import type { Config } from "tailwindcss";
+import type {Config} from "tailwindcss";
+import defaultTheme from "tailwindcss/defaultTheme";
 
-const config: Config = {
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+const config = {
+  darkMode: ["class"],
+  content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
+  prefix: "",
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      screens: {
+        xs: "450px",
+      },
+      colors: {
+        black: "#000000",
+        white: "#ffffff",
+        red: {
+          100: "#FFDFDF",
+          200: "#FA9999",
+          300: "#F76666",
+          400: "#F53333",
+          500: "#F20000",
+          600: "#C20000",
+          700: "#910000",
+          800: "#610000",
+          900: "#300000",
+        },
+        blue: {
+          100: "#ECEDF6",
+          200: "#C4C8E2",
+          300: "#A8AED4",
+          400: "#8089C1",
+          500: "#6772B5",
+          600: "#414FA2",
+          700: "#3B4893",
+          800: "#2E3873",
+          900: "#242B59",
+        },
+        orange: {
+          100: "#F3C7BD",
+          200: "#EDAB9D",
+          300: "#E58570",
+          400: "#E06D54",
+          500: "#D84929",
+          600: "#C54225",
+          700: "#99341d",
+          800: "#772817",
+          900: "#5B1F11",
+        },
+        pink: {
+          100: "#FDECF4",
+          200: "#FAC5DD",
+          300: "#F7A9CD",
+          400: "#F482B6",
+          500: "#F169A8",
+          600: "#D93E85",
+          700: "#D93E85",
+          800: "#A93068",
+          900: "#832550",
+        },
+        gray: {
+          100: "#F6F6F6",
+          200: "#E6E6E6",
+          300: "#D1D1D1",
+          400: "#A6A6A6",
+          500: "#6E6E6E",
+          600: "#484848",
+          700: "#2B2B2B",
+          800: "#1A1A1A",
+          900: "#020202",
+        },
+        stone: {
+          100: "#FDFDF8",
+          200: "#FAFAF2",
+          300: "#F4F3ED",
+          400: "#E5E5DC",
+          500: "#CCCCC3",
+          600: "#A3A399",
+          700: "#707069",
+          800: "#3D3D3A",
+          900: "#0A0A0A",
+        },
+        borderRadius: {
+          "4xl": "36px",
+          "5xl": "48px",
+        },
+        boxShadow: {
+          DEFAULT: "0px 2px 20px 0px rgba(0, 0, 0, 0.14)",
+          outline: "0 0 0 4px rgba(0, 0, 0, 0.1)",
+          button: "0px 1px 2px 0px rgba(16, 24, 40, 0.05)",
+        },
+      },
+      fontSize: {
+        xs: ["12px", "16px"],
+        sm: ["14px", "20px"],
+        base: ["16px", "24px"],
+        l: ["18px", "28px"],
+        xl: ["20px", "28px"],
+        "2xl": ["24px", "32px"],
+        "3xl": ["30px", "36px"],
+        "4xl": ["36px", "40px"],
+        "5xl": ["48px", "64px"],
+        "6xl": ["56px", "70px"],
+      },
+      letterSpacing: {
+        header: "0.96px",
+        paragraph: "0.56px",
+        subtitle: "0.72px",
       },
     },
   },
-  plugins: [],
-};
+} satisfies Config;
+
 export default config;
