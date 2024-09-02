@@ -9,7 +9,9 @@ Access the application at `http://localhost:3000`
 
 ## Introduction
 
-Welcome to the Everdome Frontend Recruitment task! This repository is designed to assess your skills in frontend development using a simple form component. Your challenge is to implement various functionalities in a Next.js application.
+Welcome to the Everdome Frontend Recruitment task! This repository is designed to assess your skills in frontend development using a simple form component. Your challenge is to implement various functionalities in a Next.js application. 
+
+Assume this is outside facing application targeted to general audience.
 
 ### Requirements
 
